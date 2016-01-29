@@ -1,3 +1,9 @@
+---
+services: hdinsight
+platforms: java
+author: blackmist
+---
+
 # hdinsight-java-hive-jdbc
 An example of how to use the JDBC to issue Hive queries from a Java client application.
 
