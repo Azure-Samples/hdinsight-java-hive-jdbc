@@ -5,6 +5,7 @@ author: blackmist
 ---
 
 # hdinsight-java-hive-jdbc
+
 An example of how to use the JDBC to issue Hive queries from a Java client application.
 
 The code in this project creates a new Hive table (external table,) and populates it with data from a sample table that is provided with the HDInsight cluster. Then it returns data from that table. Pretty basic.
@@ -13,7 +14,7 @@ The code in this project creates a new Hive table (external table,) and populate
 
 JDBC connections to an HDInsight cluster on Azure are made over port 443, and the traffic is secured using SSL. The public gateway that the clusters sit behind redirects the traffic to the port that Hive is actually listening on. So a typical connection string would like like the following:
 
-    jdbc:hive2://CLUSTERNAME.azurehdinsight.net:443/default;ssl=true?hive.server2.transport.mode=http;hive.server2.thrift.http.path=/hive2
+    jdbc:hive2://CLUSTERNAME.azurehdinsight.net:443/default;transportMode=http;ssl=true;httpPath=/hive2
 
 When establishing the connection, you have to specify the HDInsight cluster admin name and password. These authenticate the request to the gateway. For example:
 
@@ -33,7 +34,7 @@ Once the connection is established, it's just sending queries and waiting on Hiv
 
 ##To run this example
 
-1. Install Java version 7 or higher. Oracle, OpenJDBC, etc.; I'm not sure it really matters. I built/tested with Oracle Java 7 and 8.
+1. Install Java version 7 or higher. Oracle, OpenJDBC, etc.; I'm not sure it really matters. I built/tested with Oracle Java 7 and 8. The Hadoop cluster I tested with is Azure HDInsight 3.5
 
 2. Install [Maven](http://maven.apache.org/).
 

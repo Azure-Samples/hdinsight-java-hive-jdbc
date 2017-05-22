@@ -33,7 +33,7 @@ public class HDInsightHiveJdbc {
       //  connections, and will direct it to the hiveserver2 from there
       //  to the internal port 10001 that Hive is listening on.
       String connectionQuery = String.format(
-        "jdbc:hive2://%s.azurehdinsight.net:443/default;ssl=true?hive.server2.transport.mode=http;hive.server2.thrift.http.path=/hive2",
+        "jdbc:hive2://%s.azurehdinsight.net:443/default;transportMode=http;ssl=true;httpPath=/hive2",
         clusterName);
 
       //Get the connection using the cluster admin user and password
