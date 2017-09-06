@@ -38,7 +38,7 @@ Once the connection is established, it's just sending queries and waiting on Hiv
 
 2. Install [Maven](http://maven.apache.org/).
 
-3. Get an HDInsight cluster. This can be either a [Linux-based](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-linux-tutorial-get-started/) or [Windows-based](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-tutorial-get-started-windows/) cluster.
+3. Get an HDInsight cluster. This example expects a Linux-based HDInsight cluster, version 3.5 or 3.6.
 
 4. Clone/fork the repository locally and change directories into it.
 
