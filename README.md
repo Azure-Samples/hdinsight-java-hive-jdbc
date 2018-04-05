@@ -10,7 +10,7 @@ An example of how to use the JDBC to issue Hive queries from a Java client appli
 
 The code in this project creates a new Hive table (external table,) and populates it with data from a sample table that is provided with the HDInsight cluster. Then it returns data from that table. Pretty basic.
 
-##How to use JDBC with HDInsight
+## How to use JDBC with HDInsight
 
 JDBC connections to an HDInsight cluster on Azure are made over port 443, and the traffic is secured using SSL. The public gateway that the clusters sit behind redirects the traffic to the port that Hive is actually listening on. So a typical connection string would like like the following:
 
@@ -32,9 +32,9 @@ Once the connection is established, it's just sending queries and waiting on Hiv
       System.out.println( res2.getString(1) + "\t" + res2.getString(2) + "\t" + res2.getString(3) + "\t" + res2.getString(4) + "\t" + res2.getString(5) + "\t" + res2.getString(6));
     }
 
-##To run this example
+## To run this example
 
-1. Install Java version 7 or higher. Oracle, OpenJDBC, etc.; I'm not sure it really matters. I built/tested with Oracle Java 7 and 8. The Hadoop cluster I tested with is Azure HDInsight 3.5
+1. Install Java version 7 or higher. Oracle, OpenJDBC, etc.; I'm not sure it really matters. I built/tested with Oracle Java 7 and 8. The Hadoop cluster I tested with is Azure HDInsight 3.6
 
 2. Install [Maven](http://maven.apache.org/).
 
